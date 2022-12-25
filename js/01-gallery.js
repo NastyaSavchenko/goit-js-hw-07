@@ -42,11 +42,10 @@ function onImgClick(e) {
   function onEscPushClose(e) {
     if (e.code === "Escape") {
       instance.close();
+      document.removeEventListener("keydown", onEscPushClose);
     }
   }
 }
-
-console.log(galleryItems);
 
 // const galleryRef = document.querySelector(".gallery");
 
